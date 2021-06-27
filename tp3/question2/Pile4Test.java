@@ -24,37 +24,48 @@ package question2;
  *          engagements, et suivi d'un appel à tearDown(), qui les détruit.
  */
 public class Pile4Test extends junit.framework.TestCase {
-	// Définissez ici les variables d'instance nécessaires à vos engagements;
-	// Vous pouvez également les saisir automatiquement du présentoir
-	// à l'aide du menu contextuel "Présentoir --> Engagements".
-	// Notez cependant que ce dernier ne peut saisir les objets primitifs
-	// du présentoir (les objets sans constructeur, comme int, float, etc.).
+    // Définissez ici les variables d'instance nécessaires à vos engagements;
+    // Vous pouvez également les saisir automatiquement du présentoir
+    // à l'aide du menu contextuel "Présentoir --> Engagements".
+    // Notez cependant que ce dernier ne peut saisir les objets primitifs
+    // du présentoir (les objets sans constructeur, comme int, float, etc.).
 
-	/**
-	 * Constructeur de la classe-test Pile4Test
-	 */
-	public Pile4Test() {
-	}
+    /**
+     * Constructeur de la classe-test Pile4Test
+     */
+    public Pile4Test() {
+    }
 
-	/**
-	 * Met en place les engagements.
-	 * 
-	 * Méthode appelée avant chaque appel de méthode de test.
-	 */
-	protected void setUp() // throws java.lang.Exception
-	{
-		// Initialisez ici vos engagements
+    /**
+     * Met en place les engagements.
+     * 
+     * Méthode appelée avant chaque appel de méthode de test.
+     */
+    protected void setUp() // throws java.lang.Exception
+    {
+        // Initialisez ici vos engagements
 
-	}
+    }
 
-	/**
-	 * Supprime les engagements
-	 * 
-	 * Méthode appelée après chaque appel de méthode de test.
-	 */
-	protected void tearDown() // throws java.lang.Exception
-	{
-		// Libérez ici les ressources engagées par setUp()
-	}
+    /**
+     * Supprime les engagements
+     * 
+     * Méthode appelée après chaque appel de méthode de test.
+     */
+    protected void tearDown() // throws java.lang.Exception
+    {
+        // Libérez ici les ressources engagées par setUp()
+    }
 
+
+    public void test4()
+    {
+        question2.Pile4 pile41 = new question2.Pile4();
+        question2.Pile4 pile42 = new question2.Pile4();
+        assertEquals(6, pile41.capacite());
+        assertEquals(6, pile42.capacite());
+        assertEquals(false, pile42.estPleine());
+        assertEquals(true, pile42.equals(pile41));
+    }
 }
+

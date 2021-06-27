@@ -6,9 +6,10 @@ public class UneUtilisation {
 
     public static void main(String[] args) throws Exception {
         // d√©clarer p1
-        // d√©clarer p2
-
-        // p1 est ici une pile de polygones r√©guliers PolygoneRegulier.java
+        PileI<PolygoneRegulier>p1= new Pile2<PolygoneRegulier>();
+        // dÈclarer p2
+        PileI<Object> p2=new Pile2<Object>();
+        // p1 est ici une pile de polygones rÈguliers PolygoneRegulier.java
         p1.empiler(new PolygoneRegulier(4, 100));
         p1.empiler(new PolygoneRegulier(5, 100));
 
