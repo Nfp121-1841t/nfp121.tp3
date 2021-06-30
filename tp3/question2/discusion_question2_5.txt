@@ -1,0 +1,22 @@
+Cette autre réponse, élégante, n'est pas correcte
+
+public boolean equals(Object o) {
+    return this.toString().equals(o.toString());
+  }
+pourquoi ?
+
+Reponse :
+
+ils n'ont pas besoin d'avoir la même sortie toString() pour être égaux. Il n'y a pas de contrat en Java stipulant que la méthode equals() doit être vraie à la fois pour l'objet lui-même et sa méthode toString().
+
+Le seul contrat equals () a avec d'autres méthodes est avec hashCode ()
+c'est pour cela ce code ci dessous est vrai
+
+public boolean equals(Object o) {
+    if (o instanceof PileI) {
+      PileI p = (PileI) o;
+      return this.capacite() == p.capacite()
+          && this.hashCode() == p.hashCode();
+    } else
+      return false;
+  }

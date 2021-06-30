@@ -44,8 +44,10 @@ public class Pile implements PileI {
     }
 
     public Object sommet() throws PileVideException {
- 
-        return this.zone.length - 1;
+        if(estVide()){
+            throw new PileVideException();
+        }
+        return this.taille() - 1;
     }
 
     public int capacite() {
@@ -74,7 +76,7 @@ public class Pile implements PileI {
         return false;
     }
 
-    public boolean equals(Object o) {
+  /*  public boolean equals(Object o) {
 
         if (o instanceof Pile) {
             if (this.taille() == ((Pile) o).taille() && this.capacite() == ((Pile) o).capacite()) {
@@ -86,8 +88,20 @@ public class Pile implements PileI {
             }
         }
         return false;
-    }
-
+    }*
+  public boolean equals(Object o) {
+    if (o instanceof PileI) {
+      PileI p = (PileI) o;
+      return this.capacite() == p.capacite()
+          && this.hashCode() == p.hashCode();
+    } else
+      return false;
+  }*/
+    public boolean equals(Object o) {
+        String s = this.toString();
+        String ss = o.toString();
+    return this.toString() == o.toString();
+  }
     // fonction fournie
     public int hashCode() {
         return toString().hashCode();
@@ -96,16 +110,20 @@ public class Pile implements PileI {
     public String toString() {
         String resultat ;
         String s ="[";
-        for(int i =0 ; i <= this.zone.length -1 ; i++){
+        for(int i = this.taille() -1; i >=0  ; i--){
             s+= this.zone[i]+",";
+            if(i == 0){
+                s+= this.zone[i];
+            }
         }
-        resultat = s.substring(0,s.length()-1) + "]";
+        
+        resultat = s + "]";
         return resultat;
     }
 
     private boolean eltEquals(Pile p) {
 
-        for (int i = 0; i <= this.zone.length -1; i++) {
+        for (int i = 0; i <= this.taille() -1; i++) {
             if (this.zone[i] != p.zone[i]) {
                 return false;
             }

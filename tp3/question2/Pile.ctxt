@@ -5,6 +5,7 @@ comment1.params=taille
 comment1.target=Pile(int)
 comment10.params=o
 comment10.target=boolean\ equals(java.lang.Object)
+comment10.text=\ \ public\ boolean\ equals(Object\ o)\ {\r\n\r\n\ \ \ \ \ \ \ \ if\ (o\ instanceof\ Pile)\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ if\ (this.taille()\ \=\=\ ((Pile)\ o).taille()\ &&\ this.capacite()\ \=\=\ ((Pile)\ o).capacite())\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ if\ (eltEquals((Pile)\ o))\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ true;\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\ else\ {\r\n\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ return\ false;\r\n\ \ \ \ \ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ }\r\n\ \ \ \ \ \ \ \ return\ false;\r\n\ \ \ \ }*\r\n\ \ public\ boolean\ equals(Object\ o)\ {\r\n\ \ \ \ if\ (o\ instanceof\ PileI)\ {\r\n\ \ \ \ \ \ PileI\ p\ \=\ (PileI)\ o;\r\n\ \ \ \ \ \ return\ this.capacite()\ \=\=\ p.capacite()\r\n\ \ \ \ \ \ \ \ \ \ &&\ this.hashCode()\ \=\=\ p.hashCode();\r\n\ \ \ \ }\ else\r\n\ \ \ \ \ \ return\ false;\r\n}
 comment11.params=
 comment11.target=int\ hashCode()
 comment12.params=

@@ -103,6 +103,9 @@ public class PileTest extends junit.framework.TestCase {
         assertEquals(true, p1.estVide());
         assertEquals(true, p1.equals(p2));
     }
+
+     
 }
+
 
 

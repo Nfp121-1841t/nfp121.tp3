@@ -19,14 +19,36 @@ public class UneUtilisation {
         System.out.println(" la pile p2 = " + p2);
 
         try {
-            // p1.empiler(new PolygoneRegulier(5,100)); // désormais une erreur de
-            // compilation
-            // ....
-            // String s = (String)p1.depiler(); // désormais une erreur de
-            // compilation
+             p1.empiler(new PolygoneRegulier(5,100));  
+             System.out.println(" la pile p1 = " + p1);
+
+             
+            /* String s = (String)p1.depiler(); // désormais une erreur de
+             
+             l'erreur est :
+            
+            java.lang.RuntimeException: Uncompilable source code - incompatible types: question1.PolygoneRegulier cannot be converted to java.lang.String
+	at question3.UneUtilisation.main(UneUtilisation.java:27) 
+           
+        /* pour prendre le resultat du p1.depiler() il faut declarer un variable du type Object ou bien de me
+        type qui est PolygoneRegulier ou bien le valeur depiler transformer le en String d'apres 
+            la fonction toString() comme le code si dessous :
+                                                            
+        */ 
+            
+            PolygoneRegulier pr = p1.depiler();
+            System.out.println("Polygone regulier : "+pr);
+            Object o = p1.depiler();
+            System.out.println("object :"+o);
+            
+            String s = (p1.depiler()).toString();
+            System.out.println("La valeur string depiler est :"+s);
+            
+            
         } catch (Exception e) {
             e.printStackTrace();
         }
+
     }
 
 }

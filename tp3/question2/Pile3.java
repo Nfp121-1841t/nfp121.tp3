@@ -75,8 +75,8 @@ public class Pile3 implements PileI {
 
     public String toString() {
         String s = "[";
-        for(int i = 0 ; i<= v.size() -1 ; i++){
-            if(v.size()-1 == i){
+        for(int i = v.size() -1 ; i>=0  ; i--){
+            if(i == 0){
                 s+= v.get(i);
             }else{
                 s+= v.get(i) +",";
@@ -89,7 +89,8 @@ public class Pile3 implements PileI {
     public boolean equals(Object o) {
          // a completer
         if (o instanceof Pile3){
-            if(((Pile3) o).taille() == ((Pile3) o).capacite()){
+             
+            if(this.v.capacity() == ((Pile3) o).capacite() && this.v.size() == ((Pile3) o).taille()){
                 
                 return eltEquals((Pile3) o);
             }

@@ -65,21 +65,16 @@ public class Pile2<T> implements PileI<T>{
     }
     
     
-	public boolean equals(Object o){
-        
-        return false;
-    }
-
-    
+     
     public int hashCode(){
         return toString().hashCode();
     }
     
     public String toString(){
          String s = "[";
-        for (int i =0; i<= this.stk.size() - 1; i++) {
+        for (int i = this.stk.size() - 1; i>= 0; i--) {
            s+= this.stk.get(i).toString();
-           if(i >0){
+           if(i > 0){
                s+= ", ";
            }       
         }

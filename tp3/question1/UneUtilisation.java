@@ -29,7 +29,7 @@ public class UneUtilisation {
                                                 
         l'exception est :
         java.lang.ClassCastException: question1.PolygoneRegulier cannot be cast to java.lang.String
-	at question1.UneUtilisation.main(UneUtilisation.java:26)*/
+    at question1.UneUtilisation.main(UneUtilisation.java:26)*/
 
          p1.depiler();
          System.out.println("la pile p1 = "+p1.toString());

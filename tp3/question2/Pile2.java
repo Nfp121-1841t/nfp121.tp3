@@ -25,7 +25,8 @@ public class Pile2 implements PileI {
             taille = CAPACITE_PAR_DEFAUT;
         }
         stk = new Stack<Object>();
-        capacite=taille;
+        capacite= taille;
+
     }
 
     // constructeur fourni
@@ -87,11 +88,15 @@ public class Pile2 implements PileI {
      */
     public String toString() {
         String s = "[";
-        for(int i = 0 ; i<= stk.size() -1 ; i++){
-            if(stk.size()-1 == i){
-                s+= stk.get(i);
+        for(int i = stk.size()-1 ; i>= 0 ; i--){
+            if(i == 0){
+                if(stk.get(i) != null){
+                    s+= stk.get(i);
+                }
             }else{
-                s+= stk.get(i) +",";
+                if(stk.get(i) != null){
+                    s+= stk.get(i) +",";
+                }
 
             }
         }
@@ -132,7 +137,7 @@ public class Pile2 implements PileI {
      */
     public int capacite() {
         // a completer
-        return CAPACITE_PAR_DEFAUT;
+        return capacite;
     }
     
       private boolean eltEquals(Pile2 p) {
